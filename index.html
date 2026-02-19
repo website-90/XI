@@ -2,69 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$XI  Community AI Memecoin</title>
+  <title>$XI — Community AI Memecoin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-  <!-- Particles.js CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- tsParticles for background -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+
+  <!-- AOS animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
 
-<div id="particles-js"></div>
+<!-- Background -->
+<div class="background">
+  <img src="images/backg.png" alt="Background Image">
+  <div class="overlay"></div>
+</div>
 
+<!-- Header -->
 <header class="container">
   <div class="logo">
-    <img src="images/xi-logo.png" alt="$XI Logo">
+    <img src="images/logo.png" alt="$XI Logo">
     <h2>$XI</h2>
   </div>
   <nav>
     <a href="#about">About</a>
     <a href="#stats">Stats</a>
     <a href="#roadmap">Roadmap</a>
+    <a href="#vision">Vision</a>
   </nav>
 </header>
 
+<!-- Hero -->
 <section class="hero">
+  <div class="floating-token">
+    <img src="images/backg.png" alt="$XI Token">
+  </div>
   <h1>$XI — The Community AI Memecoin</h1>
   <p>AI Narrative • Community Power • Early Movement</p>
   <button onclick="scrollToSection('about')">Join The Movement</button>
 </section>
 
+<!-- About Section -->
 <section id="about" class="section container">
-  <h2>What Is $XI?</h2>
+  <h2 data-aos="fade-up">What Is $XI?</h2>
   <div class="grid">
-    <div class="card">
+    <div class="card" data-aos="fade-right">
       <h3>Community First</h3>
       <p>No VC. No insiders. Built publicly from day one.</p>
     </div>
-    <div class="card">
+    <div class="card" data-aos="fade-up">
       <h3>AI Narrative</h3>
       <p>Combining AI momentum with internet culture.</p>
     </div>
-    <div class="card">
+    <div class="card" data-aos="fade-left">
       <h3>Early Movement</h3>
       <p>Early supporters are builders shaping the ecosystem.</p>
     </div>
   </div>
+
+  <div class="text-block" data-aos="fade-up">
+    <h3>🔥 Why $XI?</h3>
+    <ul>
+      <li>✅ Community-driven growth</li>
+      <li>✅ AI-powered narrative</li>
+      <li>✅ Early-stage opportunity</li>
+      <li>✅ Viral memecoin energy</li>
+      <li>✅ Organic expansion</li>
+    </ul>
+    <p>In crypto, narratives create momentum — and momentum creates growth.</p>
+  </div>
 </section>
 
+<!-- Stats Section -->
 <section id="stats" class="section dark">
   <div class="container">
-    <h2>Live Token Stats</h2>
+    <h2 data-aos="fade-up">Live Token Stats</h2>
     <div class="grid">
-      <div class="stat-card">
+      <div class="stat-card" data-aos="zoom-in">
         <h3 id="holders">0</h3>
         <p>Holders</p>
       </div>
-      <div class="stat-card">
+      <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
         <h3 id="marketcap">0</h3>
         <p>Market Cap</p>
       </div>
-      <div class="stat-card">
+      <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
         <h3 id="supply">0</h3>
         <p>Total Supply</p>
       </div>
@@ -72,25 +103,49 @@
   </div>
 </section>
 
+<!-- Roadmap Section -->
 <section id="roadmap" class="section container">
-  <h2>Current Phase — Pre-Launch</h2>
-  <div class="card">
-    <p>
-      $XI is preparing for deployment with strong community support.
-      Transparency, organic growth, and long-term vision guide every step.
-    </p>
+  <h2 data-aos="fade-up">Current Phase — Pre-Launch</h2>
+  <div class="timeline">
+    <div class="timeline-step" data-aos="fade-right">Community Building</div>
+    <div class="timeline-step" data-aos="fade-left">Token Deployment</div>
+    <div class="timeline-step" data-aos="fade-right">Pre-Launch Awareness</div>
+    <div class="timeline-step" data-aos="fade-left">Ecosystem Expansion</div>
   </div>
 </section>
 
-<section class="section container center">
-  <h2>Join The Movement</h2>
-  <a href="https://x.com/jinpingxi_coin?s=21" target="_blank" class="btn">Follow on X</a>
+<!-- Vision Section -->
+<section id="vision" class="section container">
+  <h2 data-aos="fade-up">🔮 Vision</h2>
+  <div class="text-block" data-aos="fade-up" data-aos-delay="100">
+    <p>AI is one of the strongest narratives of this crypto cycle.</p>
+    <ul>
+      <li>• AI culture</li>
+      <li>• Memecoin innovation</li>
+      <li>• Community-driven growth</li>
+    </ul>
+    <p>Built for the new generation of crypto users.</p>
+  </div>
 </section>
 
+<!-- Join Section -->
+<section class="section container center">
+  <h2 data-aos="fade-up">📣 Join The Movement</h2>
+  <p data-aos="fade-up" data-aos-delay="100">
+    You are still early. Support $XI and shape the ecosystem from day one.
+  </p><br>
+  <a href="https://x.com/jinpingxi_coin?s=21" target="_blank" class="btn" data-aos="fade-up" data-aos-delay="200">Follow on X</a>
+</section>
+
+<!-- Footer -->
 <footer>
   🚀 $XI — Built by Community. Powered by AI.
 </footer>
 
+<!-- Scripts -->
 <script src="script.js"></script>
+<script>
+  AOS.init({ once:true, duration:1200 });
+</script>
 </body>
 </html>
