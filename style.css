@@ -1,42 +1,147 @@
-// Smooth Scroll
-function scrollToSection(id){
-  document.getElementById(id).scrollIntoView({behavior:"smooth"});
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
 }
 
-// Animated Counter
-function animateValue(id, start, end, duration) {
-  let range = end - start;
-  let current = start;
-  let increment = end > start ? 1 : -1;
-  let stepTime = Math.abs(Math.floor(duration / range));
-  let obj = document.getElementById(id);
-
-  let timer = setInterval(function() {
-    current += increment;
-    obj.innerHTML = current.toLocaleString();
-    if (current == end) {
-      clearInterval(timer);
-    }
-  }, stepTime);
+body{
+  background:#0a0a12;
+  color:white;
+  overflow-x:hidden;
 }
 
-// Demo Stats (replace later with real API)
-animateValue("holders", 0, 1287, 2000);
-animateValue("marketcap", 0, 850000, 2500);
-animateValue("supply", 0, 1000000000, 3000);
+#particles-js{
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
 
-// Particles Background
-particlesJS("particles-js", {
-  particles: {
-    number: { value: 80 },
-    size: { value: 3 },
-    move: { speed: 1 },
-    line_linked: {
-      enable: true,
-      distance: 150,
-      color: "#00f0ff",
-      opacity: 0.4,
-      width: 1
-    }
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:25px 0;
+}
+
+nav a{
+  margin-left:25px;
+  color:white;
+  text-decoration:none;
+  opacity:0.8;
+  transition:0.3s;
+}
+
+nav a:hover{
+  opacity:1;
+  color:#00f0ff;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo img{
+  width:45px;
+}
+
+.hero{
+  text-align:center;
+  padding:120px 20px;
+}
+
+.hero h1{
+  font-size:3rem;
+  font-weight:800;
+  background:linear-gradient(90deg,#00f0ff,#7b61ff);
+  -webkit-text-fill-color:transparent;
+  -webkit-background-clip:text;
+}
+
+.hero p{
+  margin-top:20px;
+  opacity:0.8;
+}
+
+button, .btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:15px 40px;
+  border-radius:40px;
+  border:none;
+  background:linear-gradient(90deg,#00f0ff,#7b61ff);
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+  text-decoration:none;
+}
+
+button:hover, .btn:hover{
+  transform:scale(1.05);
+}
+
+.section{
+  padding:90px 0;
+}
+
+.section h2{
+  text-align:center;
+  margin-bottom:50px;
+  font-size:2rem;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.card, .stat-card{
+  background:rgba(255,255,255,0.05);
+  padding:30px;
+  border-radius:20px;
+  backdrop-filter:blur(12px);
+  text-align:center;
+  transition:0.3s;
+}
+
+.card:hover, .stat-card:hover{
+  transform:translateY(-8px);
+  background:rgba(255,255,255,0.08);
+}
+
+.stat-card h3{
+  font-size:2rem;
+  color:#00f0ff;
+}
+
+.dark{
+  background:#0f0f18;
+}
+
+.center{
+  text-align:center;
+}
+
+footer{
+  text-align:center;
+  padding:40px 0;
+  background:#08080c;
+  opacity:0.6;
+}
+
+@media(max-width:768px){
+  .hero h1{
+    font-size:2rem;
   }
-});
+}
